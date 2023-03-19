@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+
+    <h:head>
+        <title>Your Shopping Cart</title>
+    </h:head>
+    <h:body>
+        <ui:include src="/WEB-INF/menu.xhtml"/>
+
+
+        <p:ajaxExceptionHandler type="java.lang.Exception"
+                                update="exceptionDialog" onexception="PF('exceptionDialog').show();" />
+
+        <p:dialog closable="true" id="exceptionDialog" header="Exception: #{pfExceptionHandler.type}
+                  occured!" widgetVar="exceptionDialog" height="200px" width="300px">
+            Message: #{pfExceptionHandler.message} <br/>
+            <p:button onclick="document.location.href = document.location.href;"
+                      value="Refresh"/>
+        </p:dialog>
+
+        <h:form>
+            <p:outputPanel autoUpdate="true">
+                <p:dataGrid emptyMessage="You don't have items in your cart" columns="1" value="#{shoppingCart.pendingOrder.orderItems.keySet()}" style="width: 700px;" var="orderItem" layout="grid">
+                    <f:facet name="header">
+                        <h:outputText rendered="#{shoppingCart.pendingOrder.orderTotal > 0} " value="Order total: $#{shoppingCart.pendingOrder.orderTotal}"/>
+                    </f:facet>
+                    <p:column>
+                        <p:panelGrid columns="4" layout="grid">
+                            <h:outputText value=" #{orderItem.productTitle}"/>
+                            <h:outputText value=" $#{orderItem.pricePer}"/>
+                            <h:outputText value="#{shoppingCart.pendingOrder.orderItems[orderItem]}"/>
+                            <p:commandButton value="Remove from cart" action="#{shoppingCart.removeFromCart(orderItem)}"/>
+
+                        </p:panelGrid>
+                    </p:column>
+                    <f:facet name="footer">
+                        <p:commandButton value="Place your Order" rendered="#{shoppingCart.pendingOrder.orderItems.size() gt 0}" action="#{shoppingCart.placeOrder}"/>
+                    </f:facet>
+                </p:dataGrid>
+            </p:outputPanel>
+        </h:form>
+    </h:body>
+</html>
+
