@@ -10,10 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
-/**
- *
- * @author SIGINT-X
- */
+
 public class Order implements Serializable {
     
     private long orderId;
@@ -32,86 +29,62 @@ public class Order implements Serializable {
         orderStatus = OrderStatus.PENDING; 
     }
 
-    /**
-     * @return the orderId
-     */
+    
     public long getOrderId() {
         return orderId;
     }
 
-    /**
-     * @param orderId the orderId to set
-     */
+    
     public void setOrderId(long orderId) {
         this.orderId = orderId;
     }
 
-    /**
-     * @return the customerId
-     */
+   
     public String getCustomerId() {
         return customerId;
     }
 
-    /**
-     * @param customerId the customerId to set
-     */
+    
     public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
 
-    /**
-     * @return the orderCreated
-     */
+    
     public Instant getOrderCreated() {
         return orderCreated;
     }
 
-    /**
-     * @param orderCreated the orderCreated to set
-     */
+   
     public void setOrderCreated(Instant orderCreated) {
         this.orderCreated = orderCreated;
     }
 
-    /**
-     * @return the orderUpdated
-     */
+  
     public Instant getOrderUpdated() {
         return orderUpdated;
     }
 
-    /**
-     * @param orderUpdated the orderUpdated to set
-     */
+ 
     public void setOrderUpdated(Instant orderUpdated) {
         this.orderUpdated = orderUpdated;
     }
 
-    /**
-     * @return the orderStatus
-     */
+   
     public OrderStatus getOrderStatus() {
         return orderStatus;
     }
 
-    /**
-     * @param orderStatus the orderStatus to set
-     */
+ 
     public void setOrderStatus(OrderStatus orderStatus) {
         this.orderStatus = orderStatus;
     }
 
-    /**
-     * @return the orderItems
-     */
+ 
     public Map<Product,Integer> getOrderItems() {
         return orderItems;
     }
 
-    /**
-     * @param orderItems the orderItems to set
-     */
+ 
     public void setOrderItems(Map<Product,Integer> orderItems) {
         this.orderItems = orderItems;
     }
