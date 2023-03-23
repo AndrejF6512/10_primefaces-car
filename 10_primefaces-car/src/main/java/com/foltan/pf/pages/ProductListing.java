@@ -11,10 +11,7 @@ import javax.inject.Named;
 import org.primefaces.PrimeFaces;
 import org.primefaces.context.RequestContext;
 
-/**
- *
- * @author SIGINT-X
- */
+
 @ViewScoped
 @Named("productPage")
 public class ProductListing implements Serializable {
