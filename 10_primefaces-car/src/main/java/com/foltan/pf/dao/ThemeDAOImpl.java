@@ -12,10 +12,7 @@ import javax.faces.event.AjaxBehaviorEvent;
 import javax.faces.event.ValueChangeEvent;
 import javax.inject.Named;
 
-/**
- *
- * @author SIGINT-X
- */
+
 @Named("themeDao")
 public class ThemeDAOImpl {
 
