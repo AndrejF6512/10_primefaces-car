@@ -12,10 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 import javax.annotation.PostConstruct;
 
-/**
- *
- * @author SIGINT-X
- */
+
 public class ProductDAOImpl implements ProductDAO<Product> {
 
     private List<Product> products;
