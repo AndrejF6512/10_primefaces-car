@@ -10,16 +10,13 @@ import static java.util.stream.Collectors.toList;
 import javax.annotation.PostConstruct;
 import javax.inject.Singleton;
 
-/**
- *
- * @author SIGINT-X
- */
+
 @Singleton
 public class OrderDAOImpl implements OrderDAO<Collection<Order>>, Serializable {
 
     ConcurrentHashMap<Long, Order> orders;
 
-    long currentOrderId = 100000000;
+    long currentOrderId = 1;
 
     @PostConstruct
     public void init() {
