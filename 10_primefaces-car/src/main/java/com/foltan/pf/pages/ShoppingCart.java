@@ -11,10 +11,7 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-/**
- *
- * @author SIGINT-X
- */
+
 @SessionScoped
 @Named("shoppingCart")
 public class ShoppingCart implements Serializable {
