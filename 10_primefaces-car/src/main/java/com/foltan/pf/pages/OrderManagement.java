@@ -17,10 +17,7 @@ import javax.inject.Named;
 import org.primefaces.PrimeFaces;
 import org.primefaces.context.RequestContext;
 
-/**
- *
- * @author SIGINT-X
- */
+
 @ViewScoped
 @Named
 public class OrderManagement implements Serializable {
