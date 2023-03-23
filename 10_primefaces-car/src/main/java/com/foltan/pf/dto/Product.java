@@ -6,10 +6,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
 
-/**
- *
- * @author SIGINT-X
- */
+
 public class Product implements Serializable {
     private String SKU;
     private long productId;
@@ -18,72 +15,52 @@ public class Product implements Serializable {
     private String productTitle;
     private BigDecimal pricePer;
 
-    /**
-     * @return the SKU
-     */
+
     public String getSKU() {
         return SKU;
     }
 
-    /**
-     * @param SKU the SKU to set
-     */
+ 
     public void setSKU(String SKU) {
         this.SKU = SKU;
     }
 
-    /**
-     * @return the productId
-     */
+  
     public long getProductId() {
         return productId;
     }
 
-    /**
-     * @param productId the productId to set
-     */
+ 
     public void setProductId(long productId) {
         this.productId = productId;
     }
 
-    /**
-     * @return the images
-     */
+
     public List<String> getImages() {
         return images;
     }
 
-    /**
-     * @param images the images to set
-     */
+ 
     public void setImages(List<String> images) {
         this.images = images;
     }
 
-    /**
-     * @return the productDesc
-     */
+  
     public String getProductDesc() {
         return productDesc;
     }
 
-    /**
-     * @param productDesc the productDesc to set
-     */
+
     public void setProductDesc(String productDesc) {
         this.productDesc = productDesc;
     }
 
-    /**
-     * @return the productTitle
-     */
+   
     public String getProductTitle() {
         return productTitle;
     }
 
-    /**
-     * @param productTitle the productTitle to set
-     */
+  
     public void setProductTitle(String productTitle) {
         this.productTitle = productTitle;
     }
@@ -133,7 +110,5 @@ public class Product implements Serializable {
     public String toString() {
         return "Product{" + "SKU=" + SKU + ", productId=" + productId + ", productTitle=" + productTitle + ", pricePer=" + pricePer + '}';
     }
-    
-    
     
 }
