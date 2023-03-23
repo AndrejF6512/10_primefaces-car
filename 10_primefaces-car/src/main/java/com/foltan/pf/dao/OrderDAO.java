@@ -5,10 +5,7 @@ import com.foltan.pf.dto.Order;
 import java.io.Serializable;
 import java.util.Collection;
 
-/**
- *
- * @author SIGINT-X
- */
+
 public interface OrderDAO<M> extends Serializable {
 
     
