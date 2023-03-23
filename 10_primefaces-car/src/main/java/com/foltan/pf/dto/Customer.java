@@ -3,10 +3,7 @@ package com.foltan.pf.dto;
 
 import java.io.Serializable;
 
-/**
- *
- * @author SIGINT-X
- */
+
 public class Customer implements Serializable {
     
     private String customerId;
