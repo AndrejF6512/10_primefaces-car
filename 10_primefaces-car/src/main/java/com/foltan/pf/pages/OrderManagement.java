@@ -39,7 +39,7 @@ public class OrderManagement implements Serializable {
             @Override
             public void contextCreated(ELContextEvent evt) {
                 evt.getELContext().getImportHandler()
-                        .importClass("com.lynda.samples.pf.constants.OrderStatus");
+                        .importClass("com.foltan.pf.constants.OrderStatus");
             }
         });
     }
